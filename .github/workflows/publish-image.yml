@@ -2,11 +2,11 @@ name: ci
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 10 * * *' # everyday at 10am
-  push:
-    tags:
-      - 'v*.*.*'
+  # schedule:
+  #   - cron: '0 10 * * *' # everyday at 10am
+  # push:
+  #   tags:
+  #     - 'v*.*.*'
 
 jobs:
   docker:
