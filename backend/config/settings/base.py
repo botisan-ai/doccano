@@ -284,6 +284,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 SOCIALACCOUNT_PROVIDERS = {
     "okta": {
+        "OKTA_CALLBACK_URL": env("OAUTH_OKTA_OAUTH2_CALLBACK_URL", ""),
         "OKTA_BASE_URL": env("OAUTH_OKTA_OAUTH2_API_URL", ""),
         "OAUTH_PKCE_ENABLED": True,
         "APP": {"client_id": env("OAUTH_OKTA_OAUTH2_KEY", ""), "secret": env("OAUTH_OKTA_OAUTH2_SECRET", "")},
