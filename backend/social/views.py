@@ -13,7 +13,7 @@ class Social(APIView):
                     "type": "oauth2",
                     "base_url": settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("OKTA_BASE_URL"),
                     "client_id": settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("APP").get("client_id"),
-                    "redirect_path": "/social/complete/okta-oauth2",
+                    "redirect_path": "/social/complete/okta-oauth2/",
                     "authorize_url": "https://"
                     + settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("OKTA_BASE_URL")
                     + "/oauth2/v1/authorize?response_type=code&client_id="
