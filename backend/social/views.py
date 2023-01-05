@@ -18,7 +18,7 @@ class Social(APIView):
                     + settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("OKTA_BASE_URL")
                     + "/oauth2/v1/authorize?response_type=code&client_id="
                     + settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("APP").get("client_id")
-                    + "&scope=openid&state=unknown&response_mode=form_post",
+                    + "&scope=openid profile email offline_access&state=unknown&response_mode=form_post",
                 }
                 if settings.SOCIALACCOUNT_PROVIDERS.get("okta").get("OKTA_BASE_URL")
                 else {},
